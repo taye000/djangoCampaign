@@ -15,9 +15,9 @@ import cloudinary
 import os
 
 cloudinary.config(
-    cloud_name=os.environ.get("CLOUD_NAME"),
-    api_key=os.environ.get("API_KEY"),
-    api_secret=os.environ.get("API_SECRET")
+    cloud_name=os.getenviron('CLOUD_NAME'),
+    api_key=os.getenviron('API_KEY'),
+    api_secret=os.getenviron('API_SECRET')
 )
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-sv2)3$puwzmj_9cd+hs1#e2z2o4)aadfcpbuf)zl9ftl)k=^t+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
